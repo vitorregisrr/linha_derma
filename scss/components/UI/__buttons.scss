@@ -1,0 +1,86 @@
+.btn {
+    padding: 11px 30px;
+    border-radius: 34px;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    @include transition();
+
+    @media screen and (max-width: $bp-MD) {
+        font-size: 11px;
+    }
+
+    &.btn-sm {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    &.btn-md-xs {
+        @media screen and (max-width: $bp-MD) {
+            font-size: 10px;
+            padding: 6px 9px;
+        }
+    }
+}
+
+.btn-primary {
+    background-color: $color-primary;
+    border: none;
+    color: #fff;
+    @include transition();
+
+    &:hover {
+        background-color: darken($color-primary, 4);
+        @include scale(1.03);
+    }
+}
+
+
+.btn-secondary {
+    background-color: $color-secondary;
+    border: none;
+    color: #fff;
+    @include transition();
+
+    &:hover {
+        background-color: darken($color-secondary, 4);
+        @include scale(1.03);
+    }
+}
+
+
+.btn-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: $color-primary;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #fff;
+    @include transition();
+
+    &.facebook {
+        background-color: #5873A8;
+    }
+
+    &.instagram {
+        background-color: #D42480;
+    }
+
+    &.youtube {
+        background-color: #EB3030;
+    }
+
+    &.whatsapp {
+        width: 39px;
+        height: 39px;
+        font-size: 20px;
+    }
+
+    &:hover {
+        color: #fff;
+        @include scale(1.04);
+    }
+}

@@ -1,0 +1,35 @@
+.card {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+
+    &-header {
+        background-color: #C6D6E7;
+        padding: 8px 25px;
+        padding-left: 16px;
+        border-radius: 23px !important;
+        border: none !important;
+        @include transition();
+
+        &:hover{
+            background-color: darken(#C6D6E7, 8);
+        }
+
+        @media screen and (max-width: $bp-MD) {
+            font-size: 15px;
+        }
+    }
+
+    &-body {
+        margin-top: 8px;
+        padding: 18px 14px 22px 21px;
+        background-color: #F4F4F4;
+        font-size: 15px;
+        color: $color-dark;
+        border-radius: 25px;
+
+        @media screen and (max-width: $bp-MD) {
+            font-size: 13px;
+        }
+    }
+}

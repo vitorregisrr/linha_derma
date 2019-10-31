@@ -1,0 +1,44 @@
+.form-control{
+    width: 100%;
+    background-color: $color-pink-l;
+    padding: 15px 20px;
+    border-radius: 29px;
+    border: none;
+    color: $color-secondary;
+    font-weight: 400;
+    @include transition();
+    
+    &:focus{
+        background-color: darken($color-pink-l, 3);
+        box-shadow: none;
+    }
+}
+
+select.form-control{
+    color: $color-dark !important;
+    padding: 14px 20px;
+    height: auto !important;
+}
+
+textarea.form-control{
+    height: auto;
+}
+
+.form-group{
+    label{
+        font-size: 16px;
+        text-transform: lowercase;
+        color: $color-dark;
+        padding-left: 4px;
+    }
+
+    label.error{
+        display: block;
+        color: rgb(240, 80, 69);
+        opacity: .8;
+        font-size: 14px;
+        font-weight: 400;
+        padding-top: 5px;
+        padding-left: 4px;
+    }
+}

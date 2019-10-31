@@ -1,0 +1,34 @@
+button[data-toggle="collapse"] {
+    width: 100%;
+    text-transform: unset;
+    text-align: left;
+    font-weight: 700;
+    background-color: transparent !important;
+    border: none !important;
+    color: #fff !important;
+    padding: 0 40px 0 0 !important;
+    text-decoration: none !important;
+    white-space: normal;
+
+    &:after {
+        content: '\f105';
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        top: 44%;
+        transform: translateY(-50%);
+        right: 21px;
+        font-size: 14px;
+        @include transition();
+
+        @media screen and (max-width: $bp-MD){
+            font-size: 13px;
+        }
+    }
+
+    &[aria-expanded="true"] {
+        &:after {
+            content: '\f107';
+        }
+    }
+}
