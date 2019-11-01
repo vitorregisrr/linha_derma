@@ -1,18 +1,15 @@
 .btn {
-    padding: 11px 30px;
-    border-radius: 34px;
-    font-size: 15px;
-    font-weight: 800;
+    padding: 15px 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
     text-transform: uppercase;
     @include transition();
 
-    @media screen and (max-width: $bp-MD) {
-        font-size: 11px;
-    }
-
     &.btn-sm {
-        padding: 8px 12px;
-        font-size: 11px;
+        padding: 13px 25px;
+        border-radius: 0;
+        font-size: 14px;
     }
 
     &.btn-md-xs {
@@ -35,7 +32,6 @@
     }
 }
 
-
 .btn-secondary {
     background-color: $color-secondary;
     border: none;
@@ -48,38 +44,28 @@
     }
 }
 
+.btn-gray {
+    border: none;
+    background-color: #D6D6D6;
+    color: #59776B;
+    @include transition();
+    
+    &:hover {
+        background-color: darken(#D6D6D6, 4);
+        color: #59776B;
+        @include scale(1.04);
+    }
+}
 
-.btn-media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 36px;
-    height: 36px;
-    background-color: $color-primary;
-    border-radius: 50%;
-    font-size: 14px;
+
+.btn-navy {
+    border: none;
+    background-color: $color-navy;
     color: #fff;
     @include transition();
 
-    &.facebook {
-        background-color: #5873A8;
-    }
-
-    &.instagram {
-        background-color: #D42480;
-    }
-
-    &.youtube {
-        background-color: #EB3030;
-    }
-
-    &.whatsapp {
-        width: 39px;
-        height: 39px;
-        font-size: 20px;
-    }
-
     &:hover {
+        background-color: darken($color-navy, 4);
         color: #fff;
         @include scale(1.04);
     }

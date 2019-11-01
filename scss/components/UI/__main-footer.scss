@@ -1,3 +1,104 @@
 .footer {
- 
+    &__contact {
+        background-color: #F1F3F4;
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 90px;
+        color: #A9A9AA;
+        font-size: 14px;
+
+        @media screen and (max-width: $bp-MD) {
+            background-color: $color-navy;
+            padding: 13px 0;
+            font-size: 10px;
+            color: #fff;
+
+            li{
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .title {
+            font-size: 16px;
+            font-family: 'Libre Baskerville', serif;
+            margin-bottom: -5px;
+
+            @media screen and (max-width: $bp-MD) {
+                font-size: 12px;
+                margin-bottom: 0;
+            }
+        }
+
+        &-social {
+            position: absolute;
+            bottom: -10px;
+            display: flex;
+            align-items: center;
+            background-color: #54CBD9;
+            border-radius: 14px 14px 0 0;
+            color: #fff;
+            padding: 10px 20px;
+
+            span {
+                font-size: 18px;
+                margin-right: 19px;
+            }
+
+            &-item {
+                color: #fff;
+                font-size: 21px;
+                margin-top: 2px;
+                @include transition();
+
+                &:hover {
+                    color: #fff;
+                    @include scale(1.04);
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        padding-bottom: 13px;
+
+        @media screen and (max-width: $bp-MD) {
+            padding: 8px 0;
+        }
+
+        &-img {
+            position: relative;
+            height: 50px;
+
+            img {
+                height: 100%;
+            }
+
+            &:first-child {
+                margin-right: 30px;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    height: 29px;
+                    width: 3px;
+                    top: 60%;
+                    transform: translateY(-50%);
+                    right: -14px;
+                    background-color: #339CC5;
+                }
+            }
+        }
+
+        &-desc {
+            color: #A7A7A7;
+            text-align: center;
+            font-size: 13px;
+
+            @media screen and (max-width: $bp-MD) {
+                font-size: 8px;
+                margin-bottom: 0;
+            }
+        }
+    }
 }
