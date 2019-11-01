@@ -1232,6 +1232,7 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
 }
 
 .footer__contact {
+  overflow: hidden;
   background-color: #F1F3F4;
   text-align: center;
   padding-bottom: 10px;
