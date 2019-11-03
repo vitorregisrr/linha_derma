@@ -1,0 +1,96 @@
+.categorias-thumbs{
+    position: relative;
+    padding: 100px 0 30px 0;
+    background-image: url(../images/backgrounds/grafismo.png);
+    background-size: cover;
+
+    @media screen and (max-width: $bp-LG){
+         padding: 50px 0 10px 0;
+    }
+
+
+    .container{
+        position: relative;
+        @media screen and (min-width: 1300px){
+            max-width: 1300px;
+        }
+    }
+
+    &__carousel{
+        .item{
+            padding: 0 40px;
+        }
+
+        .owl-next, .owl-prev{
+            width: 25px !important;
+            height: 25px !important;
+            font-size: 15px !important;
+        }
+
+        .owl-next{
+            right: 2px !important;
+        }
+
+        .owl-prev{
+            left: 2px !important;
+        }
+
+        .owl-nav{
+            top: 40% !important;
+        }
+    }
+
+    &__scrolldown{
+        display: block;
+        font-size: 27px;
+        text-align: center;
+        margin-top: 50px;
+
+        @media screen and (max-width: $bp-LG){
+            color: #f4f4f4 !important;
+            margin-top: 5px;
+            font-size: 20px;
+        }
+    }
+
+    &__item{
+        display: block;
+        width: 100%;
+        border: 2px solid $color-primary;
+        overflow: hidden;
+        @include transition();
+
+        @media screen and (max-width: $bp-LG){
+            border: none;
+            height: 490px;
+        }
+
+        img{
+            width: 100%;
+            object-fit: cover;
+            height: 90%;
+            object-position: top;
+        }
+
+        
+        &:hover{
+                @include scale(1.03);
+        }
+        
+        &-caption{
+            width: 100%;
+            padding: 11px 30px;
+            background: $grad-primary;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            height: 10%;
+
+            @media screen and (max-width: $bp-LG){
+                font-size: 17px;
+            }
+        }
+    }
+}

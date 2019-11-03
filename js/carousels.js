@@ -29,5 +29,59 @@
         }, 2)
     });
 
+    // Categorias Carousel //
+    const categoriasCarousel = $(".categorias-thumbs__carousel");
+    categoriasCarousel.owlCarousel({
+        loop: false,
+        margin: 0,
+        items: 1,
+        center: true,
+        nav: true,
+        dots: true,
+        autoHeight: true,
+        navText: [
+            "<i class='fa fa-chevron-left'>", "<i class='fa fa-chevron-right'>"
+        ],
+        slideBy: "page",
+        startPosition: 0
+    });
+    
+    // Linha completa Carousel //
+    const linhaCompletaCarousel = $(".linha-completa__carousel");
+    linhaCompletaCarousel.owlCarousel({
+        loop: false,
+        margin: 20,
+        center: true,
+        nav: true,
+        dots: true,
+        navText: [
+            "<i class='fa fa-chevron-left'>", "<i class='fa fa-chevron-right'>"
+        ],
+        slideBy: "page",
+        startPosition: 0,
+        mouseDrag: true,
+        startPosition: 2,
+        responsive:{
+            0:{
+                items: 1
+            },
+
+            768:{
+                items: 2,
+                margin: 80
+            },
+
+            920: {
+                items: 3,
+                margin: 110
+            },
+
+            1200:{
+                items: 4,
+                margin: 80
+            }
+        }
+    });
+
     window.dispatchEvent(new Event('resize'));
 })();

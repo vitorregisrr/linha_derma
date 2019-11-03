@@ -1,5 +1,5 @@
 .btn {
-    padding: 15px 40px;
+    padding: 12px 40px;
     border-radius: 5px;
     font-size: 16px;
     font-weight: 700;
@@ -7,9 +7,10 @@
     @include transition();
 
     &.btn-sm {
-        padding: 13px 25px;
+        padding: 9px 29px;
         border-radius: 0;
-        font-size: 14px;
+        font-size: 12px;
+        font-weight: 600;
     }
 
     &.btn-md-xs {
@@ -57,7 +58,6 @@
     }
 }
 
-
 .btn-navy {
     border: none;
     background-color: $color-navy;
@@ -66,6 +66,43 @@
 
     &:hover {
         background-color: darken($color-navy, 4);
+        color: #fff;
+        @include scale(1.04);
+    }
+}
+
+.btn-white {
+    border: none;
+    background-color: #fff;
+    color: #7CA245;
+    @include transition();
+
+    &:hover {
+        color: #7CA245;
+        @include scale(1.04);
+    }
+}
+
+.btn-green {
+    border: none;
+    background-color: #B9CC4B;
+    color: #fff;
+    @include transition();
+
+    &:hover {
+        color: #fff;
+        background-color: darken(#B9CC4B, 5);
+        @include scale(1.04);
+    }
+}
+
+.btn-grad-primary {
+    border: none;
+    background: $grad-primary;
+    color: #fff;
+    @include transition();
+
+    &:hover {
         color: #fff;
         @include scale(1.04);
     }
