@@ -48,6 +48,17 @@
     
     // Linha completa Carousel //
     const linhaCompletaCarousel = $(".linha-completa__carousel");
+    
+    const setPrev = function(){
+        setTimeout( () => {
+            $('.not-overlayed').removeClass('not-overlayed');
+            $('.owl-item.center').prev().addClass('not-overlayed');
+        }, 100)
+    }
+    
+    linhaCompletaCarousel.on('initialized.owl.carousel', setPrev);
+    linhaCompletaCarousel.on('changed.owl.carousel', setPrev);
+
     linhaCompletaCarousel.owlCarousel({
         loop: false,
         margin: 20,
