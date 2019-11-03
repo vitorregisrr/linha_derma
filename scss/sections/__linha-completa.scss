@@ -41,6 +41,16 @@
         }
     }
 
+    .custom-container{
+        margin: 0 auto;
+        max-width: 1600px;
+        height: 100%;
+    }
+
+    .owl-carousel .owl-stage-outer{
+        overflow: visible;
+    }
+
     &__caption {
         margin-bottom: 70px;
 

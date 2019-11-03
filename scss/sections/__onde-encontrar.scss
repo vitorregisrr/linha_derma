@@ -87,6 +87,12 @@
         box-shadow: -5px 5px 11px rgba(0, 0, 0, 0.203);
         @include transition();
         
+        @media screen and (max-width: $bp-XL) {
+            width: 170px !important;
+            height: 170px !important;
+            margin: 0 10px 20px 10px !important;
+        }
+
         @media screen and (max-width: $bp-LG) {
             width: 170px !important;
             height: 170px !important;
