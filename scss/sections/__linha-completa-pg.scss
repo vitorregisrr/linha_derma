@@ -1,0 +1,110 @@
+.linha-completa-pg {
+    padding-bottom: 110px;
+
+    @media screen and (max-width: $bp-LG) {
+        padding-bottom: 40px;
+    }
+
+    &__header {
+        padding-bottom: 13px;
+        margin-bottom: 20px;
+        padding-top: 94px;
+        background-color: rgba(0, 0, 0, 0.01);
+        
+        @media screen and (max-width: $bp-LG) {
+            padding-top: 65px;
+        }
+        
+        &-item {
+            display: block;
+            @include transition();
+            
+            &:hover {
+                @include scale(1.05);
+            }
+            
+            img {
+                width: 70px;
+                
+                @media screen and (max-width: $bp-LG) {
+                    width: 60px;
+                }
+            }
+            
+            &:not(:last-child) {
+                margin-right: 80px;
+                
+                @media screen and (max-width: $bp-LG) {
+                    margin-right: 30px;
+                }
+            }
+            
+        }
+    }
+    
+    &__banner {
+        border: 2px solid $color-primary;
+        width: 100%;
+        overflow: hidden;
+        max-width: 380px;
+        
+        @media screen and (max-width: $bp-LG) {
+            max-width: unset;
+            margin: 0 auto;
+            border: none;
+            margin-bottom: 30px;
+        }
+        
+        img {
+            width: 102%;
+
+            @media screen and (max-width: $bp-LG) {
+                height: 300px;
+                object-fit: cover;
+                object-position: top;
+            }
+
+            @media screen and (max-width: $bp-SM) {
+                height: 230px;
+            }
+        }
+
+        &-title {
+            color: #fff;
+            padding: 13px 20px;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            background: $grad-primary;
+            margin-bottom: 0;
+        }
+
+        &-desc {
+            color: $color-primary;
+            padding: 18px 50px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-size: 19px;
+            font-weight: 700;
+            text-align: center;
+
+            @media screen and (max-width: $bp-LG) {
+                display: none;
+            }
+        }
+    }
+
+    &__divisor {
+        border: 1.1px solid $color-primary;
+        opacity: .5;
+        background-color: $color-primary;
+        margin: 100px 0;
+
+        @media screen and (max-width: $bp-LG) {
+            margin: 30px auto;
+            width: 60%;
+        }
+
+    }
+}
