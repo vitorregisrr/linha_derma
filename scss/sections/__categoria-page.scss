@@ -1,0 +1,148 @@
+.categoria-page{
+
+    &__banner{
+        position: relative;
+        display: flex;
+        padding-top: 80px;
+        background-image: url(../images/backgrounds/grafismo-3.png);
+        background-position: right center;
+        background-size: cover;
+        background-repeat: no-repeat;  
+        
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: $grad-primary;  
+        }
+
+        @media screen and (max-width: $bp-LG){
+            padding-top: 50px;
+            flex-direction: column;
+            background-position: 100px center;
+        }
+
+        &-caption{
+            height: auto;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            padding: 50px 120px 30px 140px;
+
+            @media screen and (max-width: $bp-XL){
+                padding: 50px 80px 30px 100px;
+            }
+            
+            @media screen and (max-width: $bp-LG){
+                width: 100%;
+                order: 2;
+            }
+
+            @media screen and (max-width: $bp-MD){
+                padding: 30px 20px;
+            }
+
+            @media screen and (min-width: 1900px){
+                justify-content: flex-end;
+            }
+
+            &-content{
+                max-width: 500px;
+            }
+
+            &-ico{
+                width: 120px;
+                margin-bottom: 40px;
+
+                @media screen and (max-width: $bp-MD){
+                    display: block;
+                    width: 100px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &-title{
+                font-weight: 900;
+                font-size: 34px;
+                text-transform: uppercase;
+
+                @media screen and (max-width: $bp-MD){
+                    font-size: 27px;
+                }
+            }
+
+            &-desc{
+                font-size: 17px;
+                color: #A9A9AA;
+            }
+
+            .categoria-page__banner-caption-divisor{
+                width: 85px;
+                height: 5px;
+                margin: 50px 0 40px 0;
+                border: none;
+
+                @media screen and (max-width: $bp-MD){
+                    margin: 25px 0 18px 0;
+                }
+            }
+        }
+
+        &-img{
+            position: relative;
+            width: 50%;
+
+            @media screen and (max-width: $bp-LG){
+            display: none;
+            }
+
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                max-height: 700px;
+            }
+        }
+    }
+
+    &.cabelo{
+        .categoria-page__banner-caption-title{
+            color: #0DBBE8;
+        }
+
+        .categoria-page__banner-caption-divisor{
+            background-color: #0DBBE8;
+        }
+
+        .categoria-page__banner-img{
+            background-color: rgba(13, 188, 232, 0.664);
+        }
+    }
+
+    &.unhas{
+        .categoria-page__banner-caption-title{
+            color: #6FFAAF;
+        }
+
+        .categoria-page__banner-caption-divisor{
+            background-color: #6FFAAF;
+        }
+
+        .categoria-page__banner-img{
+            background-color: rgba(111, 250, 176, .75);
+
+            img{
+                width: 60%;
+
+                @media screen and (max-width: 1170px){
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

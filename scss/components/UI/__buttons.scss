@@ -1,6 +1,7 @@
 .btn {
-    padding: 12px 40px;
-    border-radius: 5px;
+    padding: 12px 40px !important;
+    border-radius: 4px !important;
+    border: none;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
@@ -97,11 +98,21 @@
 }
 
 .btn-grad-primary {
-    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: $grad-primary;
     color: #fff;
+    padding: 12px 10px;
+    font-weight: 800;
+    font-size: 14px;
+    
+    i.fa{
+        font-size: 19px;
+    }
+    
     @include transition();
-
+    
     &:hover {
         color: #fff;
         @include scale(1.04);

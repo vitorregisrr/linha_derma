@@ -37,9 +37,19 @@
     }
 
     .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         padding: 14px 0;
         margin-bottom: 18px;
+        font-size: 14px;
+        padding: 12px 10px;
+        font-weight: 800;
+
+        i.fa{
+            font-size: 19px;
+        }
     }
 
     &__warning{

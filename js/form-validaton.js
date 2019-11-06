@@ -1,4 +1,4 @@
-$("#agendamento-form").validate({
+$("#form-contato").validate({
     rules: {
         nome: {
             required: true,
@@ -10,11 +10,15 @@ $("#agendamento-form").validate({
             email: true
         },
 
-        periodo: {
+        telefone: {
             required: true,
         },
 
-        telefone: {
+        assunto: {
+            required: true,
+        },
+
+        mensagem: {
             required: true,
         },
     },
@@ -30,12 +34,16 @@ $("#agendamento-form").validate({
             email: 'Email inválido'
         },
 
-        periodo: {
-            required: 'Escolha um período',
+        telefone: {
+            required: 'Digite o telefone',
         },
 
-        telefone: {
-            required: 'Precisamos do seu telefone ou celular',
+        assunto: {
+            required: 'Digite o assunto',
+        },
+
+        mensagem: {
+            required: 'Digite a mensagem',
         },
     }
 });
