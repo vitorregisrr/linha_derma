@@ -1,105 +1,156 @@
-.categoria-page{
+.categoria-page {
 
-    &__banner{
+    &__scrolldown {
+        display: block;
+        margin-top: 30px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    &__banner {
         position: relative;
         display: flex;
         padding-top: 80px;
         background-image: url(../images/backgrounds/grafismo-3.png);
         background-position: right center;
         background-size: cover;
-        background-repeat: no-repeat;  
-        
-        &:after{
+        background-repeat: no-repeat;
+
+        &:after {
             content: '';
             position: absolute;
             bottom: -5px;
             left: 0;
             width: 100%;
             height: 5px;
-            background: $grad-primary;  
+            background: $grad-primary;
         }
 
-        @media screen and (max-width: $bp-LG){
+
+        @media screen and (max-width: 1350px) {
+            background-position: -30px center;
+        }
+
+        @media screen and (max-width: $bp-LG) {
             padding-top: 50px;
             flex-direction: column;
             background-position: 100px center;
+
+            &::after {
+                top: 350px;
+            }
         }
 
-        &-caption{
+
+        &-caption {
             height: auto;
             width: 50%;
             display: flex;
             justify-content: center;
             padding: 50px 120px 30px 140px;
 
-            @media screen and (max-width: $bp-XL){
+            @media screen and (max-width: $bp-XL) {
                 padding: 50px 80px 30px 100px;
             }
-            
-            @media screen and (max-width: $bp-LG){
+
+            @media screen and (max-width: $bp-LG) {
                 width: 100%;
                 order: 2;
             }
 
-            @media screen and (max-width: $bp-MD){
+            @media screen and (max-width: $bp-MD) {
                 padding: 30px 20px;
             }
 
-            @media screen and (min-width: 1900px){
+            @media screen and (min-width: 1900px) {
                 justify-content: flex-end;
             }
 
-            &-content{
+            &-content {
                 max-width: 500px;
             }
 
-            &-ico{
+            &-ico {
                 width: 120px;
-                margin-bottom: 40px;
+                margin-bottom: 60px;
 
-                @media screen and (max-width: $bp-MD){
-                    display: block;
+                @media screen and (max-width: $bp-LG) {
+                    display: inline-block;
                     width: 100px;
-                    margin-bottom: 20px;
+                    margin-right: 20px;
+                    margin-bottom: 40px;
+                }
+
+                @media screen and (max-width: $bp-MD) {
+                    width: 25%;
+                    max-width: 100px;
                 }
             }
 
-            &-title{
+            &-title {
+                position: relative;
                 font-weight: 900;
-                font-size: 34px;
+                font-size: 40px;
                 text-transform: uppercase;
 
-                @media screen and (max-width: $bp-MD){
-                    font-size: 27px;
+                @media screen and (max-width: $bp-LG) {
+                    display: inline-block;
+                    margin-bottom: 70px;
+                    
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        bottom: -30px;
+                        left: 0;
+                        width: 50px;
+                        height: 3.5px;
+                    }
+                }
+
+                @media screen and (max-width: $bp-MD) {
+                    font-size: 24px;
+                    width: 65%;
+                }
+
+                @media screen and (max-width: 340px) {
+                    font-size: 19px;
+                    width: 60%;
                 }
             }
 
-            &-desc{
+            &-desc {
                 font-size: 17px;
                 color: #A9A9AA;
             }
 
-            .categoria-page__banner-caption-divisor{
-                width: 85px;
+            .categoria-page__banner-caption-divisor {
+                width: 65px;
                 height: 5px;
                 margin: 50px 0 40px 0;
                 border: none;
-
-                @media screen and (max-width: $bp-MD){
-                    margin: 25px 0 18px 0;
+                
+                @media screen and (max-width: $bp-LG) {
+                  display: none;
                 }
             }
         }
 
-        &-img{
+        &-img {
             position: relative;
             width: 50%;
 
-            @media screen and (max-width: $bp-LG){
-            display: none;
+            @media screen and (max-width: $bp-LG) {
+                background-image: url(../images/backgrounds/grafismo-3.png);
+                background-position: right center;
+                background-size: cover;
+                background-repeat: no-frepeat;
+                order: 1;
+                width: 100%;
+                height: 300px;
+                padding-top: 30px;
             }
 
-            img{
+            img {
                 display: block;
                 margin: 0 auto;
                 width: 100%;
@@ -110,38 +161,176 @@
         }
     }
 
-    &.cabelo{
-        .categoria-page__banner-caption-title{
+    &.cabelo {
+        .categoria-page__banner-caption-title {
             color: #0DBBE8;
         }
 
-        .categoria-page__banner-caption-divisor{
+        .categoria-page__banner-caption-divisor, .categoria-page__banner-caption-title:after {
             background-color: #0DBBE8;
         }
 
-        .categoria-page__banner-img{
+        .categoria-page__banner-img {
             background-color: rgba(13, 188, 232, 0.664);
         }
     }
 
-    &.unhas{
-        .categoria-page__banner-caption-title{
+    &.unhas {
+        .categoria-page__banner-caption-title {
             color: #6FFAAF;
         }
 
-        .categoria-page__banner-caption-divisor{
+        .categoria-page__banner-caption-divisor, .categoria-page__banner-caption-title:after {
             background-color: #6FFAAF;
         }
 
-        .categoria-page__banner-img{
+        .categoria-page__banner-img {
             background-color: rgba(111, 250, 176, .75);
 
-            img{
+            img {
                 width: 60%;
 
-                @media screen and (max-width: 1170px){
+                @media screen and (max-width: 1170px) {
                     width: 80%;
                 }
+            }
+        }
+    }
+
+    &__beneficios {
+        position: relative;
+        padding-top: 130px;
+
+        @media screen and (max-width: $bp-LG){
+            padding-top: 50px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            bottom: 15px;
+            left: -40px;
+            background-image: url(../images/backgrounds/bullets-top-left.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 500px;
+
+            @media screen and (max-width: $bp-MD){
+                display: none;
+            }
+        }
+
+
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 15px;
+            right: -90px;
+            background-image: url(../images/backgrounds/bullets-top-right.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 500px;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &-title {
+            text-align: center;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #A9A9AA;
+            font-size: 44px;
+            letter-spacing: 1.5px;
+
+            @media screen and (max-width: $bp-MD) {
+                font-size: 28px;
+            }
+        }
+    }
+
+    &__voce-sabia{
+        position: relative;
+        padding: 70px 0 20px 0;
+        background: #E6E7E8;
+
+        @media screen and (max-width: $bp-LG){
+            padding: 40px 0;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: -90px;
+            background-image: url(../images/backgrounds/bullets-top-right.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 500px;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 15px;
+            left: -130px;
+            background-image: url(../images/backgrounds/bullets-top-right.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 500px;
+            transform: rotate(-180deg);
+
+            @media screen and (max-width: $bp-MD) {
+                width: 250px;
+                height: 300px;
+            }
+        }
+
+        &-ico{
+            color: #54CBD9;
+            font-weight: 900;
+            font-size: 110px;
+        }
+
+        .inner-title{
+            margin-bottom: 100px;
+
+            @media screen and (max-width: $bp-LG){
+                margin-bottom: 60px;
+            }
+
+            &:after{
+                bottom: -45px;
+
+                @media screen and (max-width: $bp-LG){
+                    height: 6px;
+                    bottom: -25px;
+                }
+
+            }
+        }
+        &-desc{
+            font-size: 26px;
+            letter-spacing: 1.5px;
+            text-align: center;
+            color: #A9A9AA;
+            text-transform: uppercase;
+            max-width: 900px;
+            margin: 0 auto;
+
+            @media screen and (max-width: $bp-LG){
+                 font-size: 19px;
             }
         }
     }

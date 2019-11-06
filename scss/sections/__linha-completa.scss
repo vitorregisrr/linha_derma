@@ -18,8 +18,14 @@
         width: 300px;
         height: 500px;
 
-        @media screen and (max-width: 768px) {
-            display: none;
+        @media screen and (max-width: $bp-LG) {
+            transform: rotate(-180deg);
+            width: 110px;
+            height: 280px;
+            top: unset;
+            bottom: -5px;
+            right: 0px;
+            left: unset;
         }
     }
 
@@ -36,8 +42,13 @@
         width: 300px;
         height: 500px;
 
-        @media screen and (max-width: 768px) {
-            display: none;
+        @media screen and (max-width: $bp-LG) {
+            transform: rotate(-180deg);
+            width: 110px;
+            height: 280px;
+            top: unset;
+            bottom: -5px;
+            left: 5px;
         }
     }
 
@@ -204,7 +215,7 @@
             background: #fff;
 
             @media screen and (max-width: $bp-MD) {
-                height: 190px;
+                height: 160px;
             }
         }
 
