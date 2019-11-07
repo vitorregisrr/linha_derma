@@ -3644,20 +3644,41 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
   color: #0DBBE8;
 }
 
-.categoria-page.cabelo .categoria-page__banner-caption-divisor, .categoria-page.cabelo .categoria-page__banner-caption-title:after {
+@media screen and (max-width: 992px) {
+  .categoria-page.cabelo .categoria-page__banner:after {
+    top: 450px;
+  }
+}
+
+.categoria-page.cabelo .categoria-page__banner-caption-divisor,
+.categoria-page.cabelo .categoria-page__banner-caption-title:after {
   background-color: #0DBBE8;
 }
 
 .categoria-page.cabelo .categoria-page__banner-img {
+  padding-top: 0;
   background-color: rgba(13, 188, 232, 0.664);
 }
 
-.categoria-page.unhas .categoria-page__banner-caption-title {
-  color: #6FFAAF;
+@media screen and (max-width: 992px) {
+  .categoria-page.cabelo .categoria-page__banner-img {
+    height: 400px;
+  }
 }
 
-.categoria-page.unhas .categoria-page__banner-caption-divisor, .categoria-page.unhas .categoria-page__banner-caption-title:after {
-  background-color: #6FFAAF;
+.categoria-page.cabelo .categoria-page__banner-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.categoria-page.unhas .categoria-page__banner-caption-title {
+  color: #6DF4ED;
+}
+
+.categoria-page.unhas .categoria-page__banner-caption-divisor,
+.categoria-page.unhas .categoria-page__banner-caption-title:after {
+  background-color: #6DF4ED;
 }
 
 .categoria-page.unhas .categoria-page__banner-img {
@@ -3670,6 +3691,29 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
 
 @media screen and (max-width: 1170px) {
   .categoria-page.unhas .categoria-page__banner-img img {
+    width: 80%;
+  }
+}
+
+.categoria-page.pele .categoria-page__banner-caption-title {
+  color: #6DF4ED;
+}
+
+.categoria-page.pele .categoria-page__banner-caption-divisor,
+.categoria-page.pele .categoria-page__banner-caption-title:after {
+  background-color: #6DF4ED;
+}
+
+.categoria-page.pele .categoria-page__banner-img {
+  background-color: rgba(109, 244, 237, 0.767);
+}
+
+.categoria-page.pele .categoria-page__banner-img img {
+  width: 60%;
+}
+
+@media screen and (max-width: 1170px) {
+  .categoria-page.pele .categoria-page__banner-img img {
     width: 80%;
   }
 }
@@ -3689,7 +3733,7 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
   content: '';
   position: absolute;
   z-index: -1;
-  bottom: 15px;
+  top: 15px;
   left: -40px;
   background-image: url(../images/backgrounds/bullets-top-left.png);
   background-size: contain;

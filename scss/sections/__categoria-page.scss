@@ -96,8 +96,8 @@
                 @media screen and (max-width: $bp-LG) {
                     display: inline-block;
                     margin-bottom: 70px;
-                    
-                    &:after{
+
+                    &:after {
                         content: '';
                         position: absolute;
                         bottom: -30px;
@@ -128,9 +128,9 @@
                 height: 5px;
                 margin: 50px 0 40px 0;
                 border: none;
-                
+
                 @media screen and (max-width: $bp-LG) {
-                  display: none;
+                    display: none;
                 }
             }
         }
@@ -166,22 +166,41 @@
             color: #0DBBE8;
         }
 
-        .categoria-page__banner-caption-divisor, .categoria-page__banner-caption-title:after {
+        .categoria-page__banner:after {
+            @media screen and (max-width: $bp-LG) {
+                top: 450px;
+            }
+        }
+
+        .categoria-page__banner-caption-divisor,
+        .categoria-page__banner-caption-title:after {
             background-color: #0DBBE8;
         }
 
         .categoria-page__banner-img {
+            padding-top: 0;
             background-color: rgba(13, 188, 232, 0.664);
+
+            @media screen and (max-width: $bp-LG) {
+                height: 400px;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
         }
     }
 
     &.unhas {
         .categoria-page__banner-caption-title {
-            color: #6FFAAF;
+            color: #6DF4ED;
         }
 
-        .categoria-page__banner-caption-divisor, .categoria-page__banner-caption-title:after {
-            background-color: #6FFAAF;
+        .categoria-page__banner-caption-divisor,
+        .categoria-page__banner-caption-title:after {
+            background-color: #6DF4ED;
         }
 
         .categoria-page__banner-img {
@@ -197,11 +216,34 @@
         }
     }
 
+    &.pele {
+        .categoria-page__banner-caption-title {
+            color: #6DF4ED;
+        }
+
+        .categoria-page__banner-caption-divisor,
+        .categoria-page__banner-caption-title:after {
+            background-color: #6DF4ED;
+        }
+
+        .categoria-page__banner-img {
+            background-color: rgba(109, 244, 237, 0.767);
+
+            img {
+                width: 60%;
+
+                @media screen and (max-width: 1170px) {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
     &__beneficios {
         position: relative;
         padding-top: 130px;
 
-        @media screen and (max-width: $bp-LG){
+        @media screen and (max-width: $bp-LG) {
             padding-top: 50px;
         }
 
@@ -209,7 +251,7 @@
             content: '';
             position: absolute;
             z-index: -1;
-            bottom: 15px;
+            top: 15px;
             left: -40px;
             background-image: url(../images/backgrounds/bullets-top-left.png);
             background-size: contain;
@@ -217,7 +259,7 @@
             width: 300px;
             height: 500px;
 
-            @media screen and (max-width: $bp-MD){
+            @media screen and (max-width: $bp-MD) {
                 display: none;
             }
         }
@@ -254,12 +296,12 @@
         }
     }
 
-    &__voce-sabia{
+    &__voce-sabia {
         position: relative;
         padding: 70px 0 20px 0;
         background: #E6E7E8;
 
-        @media screen and (max-width: $bp-LG){
+        @media screen and (max-width: $bp-LG) {
             padding: 40px 0;
         }
 
@@ -297,30 +339,31 @@
             }
         }
 
-        &-ico{
+        &-ico {
             color: #54CBD9;
             font-weight: 900;
             font-size: 110px;
         }
 
-        .inner-title{
+        .inner-title {
             margin-bottom: 100px;
 
-            @media screen and (max-width: $bp-LG){
+            @media screen and (max-width: $bp-LG) {
                 margin-bottom: 60px;
             }
 
-            &:after{
+            &:after {
                 bottom: -45px;
 
-                @media screen and (max-width: $bp-LG){
+                @media screen and (max-width: $bp-LG) {
                     height: 6px;
                     bottom: -25px;
                 }
 
             }
         }
-        &-desc{
+
+        &-desc {
             font-size: 26px;
             letter-spacing: 1.5px;
             text-align: center;
@@ -329,8 +372,8 @@
             max-width: 900px;
             margin: 0 auto;
 
-            @media screen and (max-width: $bp-LG){
-                 font-size: 19px;
+            @media screen and (max-width: $bp-LG) {
+                font-size: 19px;
             }
         }
     }
