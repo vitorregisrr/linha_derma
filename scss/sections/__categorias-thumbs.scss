@@ -41,19 +41,6 @@
         .owl-nav {
             top: 40% !important;
         }
-
-        .owl-dot {
-            background-color: #A9A9AA !important;
-            width: 9px !important;
-            height: 9px !important;
-            margin: 0 7px !important;
-
-            &.active {
-                background-color: $color-primary !important;
-                width: 12px !important;
-                height: 12px !important;
-            }
-        }
     }
 
     &__scrolldown {

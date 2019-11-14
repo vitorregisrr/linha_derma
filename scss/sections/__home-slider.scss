@@ -23,6 +23,8 @@
             position: relative;
             background-image: url('../images/backgrounds/pantogar-men_bg.png');
             background-size: cover;
+            background: none;
+            background-color: #F0F0F0;
             width: 100%;
 
             @media screen and (max-width: 1230px){

@@ -64,13 +64,19 @@
 
         .owl-dot {
             position: relative;
-            width: 4px;
-            height: 4px;
-            background-color: #dadada;
+            width: 9px;
+            height: 9px;
+            background-color: #A9A9AA;
+            margin: 0 7px;
             border-radius: 50%;
-            margin-right: 10px;
             cursor: pointer;
             @include transition();
+
+            &.active {
+                background-color: $color-primary;
+                width: 12px;
+                height: 12px;
+            }
 
             &:after{
                 content: '';
