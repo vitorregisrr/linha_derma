@@ -1,59 +1,73 @@
-.categorias-thumbs{
+.categorias-thumbs {
     position: relative;
     padding: 100px 0 30px 0;
     background-image: url(../images/backgrounds/grafismo.png);
     background-size: cover;
 
-    @media screen and (max-width: $bp-LG){
-         padding: 50px 0 10px 0;
+    @media screen and (max-width: $bp-LG) {
+        padding: 40px 0 10px 0;
+        background: none;
+        background-color: #F6F8F9;
     }
 
-
-    .container{
+    .container {
         position: relative;
-        @media screen and (min-width: 1300px){
+
+        @media screen and (min-width: 1300px) {
             max-width: 1300px;
         }
     }
 
-    &__carousel{
-        .item{
+    &__carousel {
+        .item {
             padding: 0 40px;
         }
 
-        .owl-next, .owl-prev{
+        .owl-next,
+        .owl-prev {
             width: 25px !important;
             height: 25px !important;
             font-size: 15px !important;
         }
 
-        .owl-next{
+        .owl-next {
             right: 2px !important;
         }
 
-        .owl-prev{
+        .owl-prev {
             left: 2px !important;
         }
 
-        .owl-nav{
+        .owl-nav {
             top: 40% !important;
+        }
+
+        .owl-dot {
+            background-color: #A9A9AA !important;
+            width: 9px !important;
+            height: 9px !important;
+            margin: 0 7px !important;
+
+            &.active {
+                background-color: $color-primary !important;
+                width: 12px !important;
+                height: 12px !important;
+            }
         }
     }
 
-    &__scrolldown{
+    &__scrolldown {
         display: block;
         font-size: 27px;
         text-align: center;
         margin-top: 50px;
 
-        @media screen and (max-width: $bp-LG){
-            color: #f4f4f4 !important;
-            margin-top: 5px;
-            font-size: 20px;
+        @media screen and (max-width: $bp-LG) {
+            display: none;
         }
     }
 
-    &__item{
+    &__item {
         position: relative;
         display: block;
         width: 100%;
@@ -61,20 +75,20 @@
         overflow: hidden;
         @include transition();
 
-        @media screen and (max-width: $bp-LG){
+        @media screen and (max-width: $bp-LG) {
             border: none;
             height: 490px;
         }
 
-        img{
+        img {
             width: 100%;
             object-fit: cover;
             height: 90%;
             object-position: top;
         }
 
-        
-        &::after{
+
+        &::after {
             content: '';
             position: absolute;
             left: 0;
@@ -89,31 +103,31 @@
             @include transition();
         }
 
-        &.hover-blue{
-            &:after{
-            background-color: #0DBBE8;        
-            }
-        }
-
-        &.hover-turq{
-            &:after{
+        &.hover-blue {
+            &:after {
                 background-color: #0DBBE8;
             }
         }
 
-        &.hover-green{
-            &:after{
+        &.hover-turq {
+            &:after {
+                background-color: #0DBBE8;
+            }
+        }
+
+        &.hover-green {
+            &:after {
                 background-color: #6FFAAF;
             }
         }
 
-        &:hover{
-            &::after{
+        &:hover {
+            &::after {
                 opacity: .5;
             }
         }
-        
-        &-caption{
+
+        &-caption {
             position: relative;
             width: 100%;
             padding: 11px 30px;
@@ -126,7 +140,7 @@
             height: 10%;
             z-index: 5;
 
-            @media screen and (max-width: $bp-LG){
+            @media screen and (max-width: $bp-LG) {
                 font-size: 17px;
             }
         }
