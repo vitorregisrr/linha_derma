@@ -40,6 +40,24 @@
         $(this).find('.linha-completa-pg-mob__item-content').addClass('active');
     })
 
+    // Redirect modal scripts
+    $('a[target="_blank"]').click( function(){
+        event.preventDefault();
+        event.stopPropagation();
+        $('#redirect-modal').addClass('active');
+
+        const link = $(this).attr('href');
+
+        setTimeout( function(link){
+            window.open(link);
+        }, 1300, link);
+    });
+
+    $('[data-toggle="redirect-modal"]').click( function(event){
+        $('#redirect-modal').addClass('active');
+        $('#redirect-modal').toggleClass('active');
+    })
+
     window.dispatchEvent(new Event('resize'));
 
 })();
