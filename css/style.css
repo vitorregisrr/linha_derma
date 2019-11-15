@@ -1063,8 +1063,8 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
 }
 
 .btn {
-  padding: 12px 40px !important;
-  border-radius: 4px !important;
+  padding: 12px 40px;
+  border-radius: 4px;
   border: none;
   font-size: 16px;
   font-weight: 700;
@@ -2686,6 +2686,112 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
 @media screen and (max-width: 992px) {
   .contact__info-desc {
     font-size: 14px;
+  }
+}
+
+.error-404 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-image: url(../images/backgrounds/bg_error-404.png);
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+@media screen and (max-width: 992px) {
+  .error-404 {
+    padding: 20px 10px;
+  }
+}
+
+.error-404__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(252, 252, 252, 0.627);
+  border-radius: 20px;
+  padding: 70px 20px 80px 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .error-404__content {
+    padding: 40px 15px;
+  }
+}
+
+.error-404__title {
+  font-size: 45px;
+  text-transform: uppercase;
+  color: #A9A9AA;
+  letter-spacing: 4px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .error-404__title {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+}
+
+.error-404__subtitle {
+  font-size: 23px;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  letter-spacing: 1.5px;
+  color: #939394;
+  border: 12px solid #4DD3DC;
+  border-width: 1.5px 0 1.5px 0;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .error-404__subtitle {
+    margin-bottom: 40px;
+  }
+}
+
+.error-404__desc {
+  font-weight: 600;
+  color: #939394;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .error-404__desc {
+    margin-bottom: 50px;
+  }
+}
+
+.error-404__img {
+  position: relative;
+  height: 230px;
+}
+
+@media screen and (max-width: 992px) {
+  .error-404__img {
+    height: 140px;
+  }
+}
+
+.error-404__img img {
+  position: absolute;
+  left: -200px;
+  top: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .error-404__img img {
+    width: 310px;
+    left: -130px;
   }
 }
 
