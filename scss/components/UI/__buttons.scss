@@ -117,4 +117,8 @@
         color: #fff;
         @include scale(1.04);
     }
+
+    &:focus, &:active, &:hover{
+        background: $grad-primary !important;
+    }
 }

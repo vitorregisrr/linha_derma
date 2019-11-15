@@ -410,7 +410,7 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 0;
+  padding: 20px 0 40px 0;
 }
 
 .owl-carousel .owl-dots .owl-dot {
@@ -1242,6 +1242,10 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
   transform: scale(1.04);
 }
 
+.btn-grad-primary:focus, .btn-grad-primary:active, .btn-grad-primary:hover {
+  background: linear-gradient(90deg, #0dbbe8 0%, #6ffaaf 90%) !important;
+}
+
 .footer__contact {
   overflow: hidden;
   background-color: #F1F3F4;
@@ -1387,6 +1391,10 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
     width: 150px;
     height: 150px;
   }
+}
+
+.grad-circle__desc {
+  max-width: 250px;
 }
 
 .grad-circle img {
@@ -1584,8 +1592,7 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
 }
 
 .product-thumb__img img {
-  width: 120%;
-  margin-left: -10%;
+  width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center bottom;
@@ -1653,9 +1660,14 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
   position: relative;
   background-image: url("../images/backgrounds/pantogar-men_bg.png");
   background-size: cover;
-  background: none;
-  background-color: #F0F0F0;
   width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .home-slider__item.pantogar {
+    background: none;
+    background-color: #F0F0F0;
+  }
 }
 
 @media screen and (max-width: 1230px) {
@@ -2540,53 +2552,6 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
   }
 }
 
-.linha-completa__carousel .owl-dot {
-  position: relative;
-  width: 4px !important;
-  height: 4px !important;
-  background-color: #dadada;
-  border-radius: 50%;
-  margin-right: 10px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-@media screen and (min-width: 768px) {
-  .linha-completa__carousel .owl-dot {
-    width: 10px !important;
-    height: 10px !important;
-  }
-}
-
-.linha-completa__carousel .owl-dot:after {
-  content: '';
-  width: 175% !important;
-  height: 175% !important;
-  border: 1px solid #0DBBE8;
-  border-radius: 50%;
-  margin-top: -.1px;
-  margin-left: -.1px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.linha-completa__carousel .owl-dot.active {
-  width: 10px !important;
-  height: 10px !important;
-  background-color: #0DBBE8;
-}
-
-.linha-completa__carousel .owl-dot.active:after {
-  opacity: 1;
-}
-
 .linha-completa__carousel .owl-prev,
 .linha-completa__carousel .owl-next {
   font-size: 20px !important;
@@ -2857,6 +2822,47 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
     margin: 30px auto;
     width: 60%;
   }
+}
+
+.linha-completa-pg-mob {
+  padding-top: 50px;
+}
+
+.linha-completa-pg-mob__item-header {
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.linha-completa-pg-mob__item-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: left;
+  font-size: 14px;
+  max-width: 180px;
+}
+
+.linha-completa-pg-mob__item-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.linha-completa-pg-mob__item-content.active {
+  padding: 30px 0 0 0;
+  opacity: 1;
+  max-height: 1000px;
+}
+
+.linha-completa-pg-mob__item-more {
+  border-radius: 0;
 }
 
 .onde-encontrar {

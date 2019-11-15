@@ -34,6 +34,12 @@
         }, 500);
     });
 
+    // Linha completa mobile dropdowns
+    $('.linha-completa-pg-mob__item').click( function(){
+        $('.linha-completa-pg-mob__item-content').removeClass('active');
+        $(this).find('.linha-completa-pg-mob__item-content').addClass('active');
+    })
+
     window.dispatchEvent(new Event('resize'));
 
 })();
