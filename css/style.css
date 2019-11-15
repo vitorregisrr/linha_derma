@@ -2862,7 +2862,7 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
 }
 
 .linha-completa-pg-mob__item-more {
-  border-radius: 0;
+  border-radius: 0 !important;
 }
 
 .onde-encontrar {
