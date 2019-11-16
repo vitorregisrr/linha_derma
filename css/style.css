@@ -1166,11 +1166,6 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
   background-color: #0DBBE8;
   border: none;
   color: #fff;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
@@ -1182,15 +1177,27 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
   transform: scale(1.03);
 }
 
+.btn-primary--outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 10px;
+  font-weight: 800;
+  font-size: 14px;
+  background-color: transparent;
+  border: 1px solid #0DBBE8;
+  color: #0DBBE8 !important;
+}
+
+.btn-primary--outline:hover {
+  background-color: #0DBBE8;
+  color: #fff !important;
+}
+
 .btn-secondary {
   background-color: #6FFAAF;
   border: none;
   color: #fff;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .btn-secondary:hover {
@@ -1200,6 +1207,20 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
   -ms-transform: scale(1.03);
   -o-transform: scale(1.03);
   transform: scale(1.03);
+}
+
+.btn-secondary--outline {
+  padding: 12px 10px;
+  font-weight: 800;
+  font-size: 14px;
+  background-color: transparent;
+  border-color: 1px solid #6FFAAF;
+  color: #6FFAAF !important;
+}
+
+.btn-secondary--outline:hover {
+  background-color: #6FFAAF;
+  color: #fff !important;
 }
 
 .btn-gray {
@@ -1473,6 +1494,130 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
   width: 64%;
 }
 
+.modal-explorer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F7F7F7;
+  opacity: 0;
+  z-index: 11;
+  pointer-events: none;
+  max-width: 100vw;
+  overflow-x: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-explorer:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 20px;
+  left: 0px;
+  background-image: url(../images/backgrounds/bullets-top-left.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 500px;
+}
+
+@media screen and (max-width: 992px) {
+  .modal-explorer:after {
+    width: 220px;
+    height: 270px;
+    top: -0px;
+    left: -20px;
+  }
+}
+
+.modal-explorer:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 20px;
+  right: -90px;
+  background-image: url(../images/backgrounds/bullets-top-right.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 500px;
+}
+
+@media screen and (max-width: 992px) {
+  .modal-explorer:before {
+    width: 220px;
+    height: 270px;
+    right: -155px;
+    top: 0px;
+  }
+}
+
+.modal-explorer.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.modal-explorer__content {
+  color: #A1A1A3;
+}
+
+@media screen and (max-width: 992px) {
+  .modal-explorer__content {
+    overflow-y: scroll;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .modal-explorer__ico {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    width: 200px;
+  }
+}
+
+.modal-explorer__title {
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.modal-explorer hr {
+  border: 2px solid #54CBD9;
+  width: 80%;
+  margin-left: 0 !important;
+}
+
+@media screen and (max-width: 992px) {
+  .modal-explorer hr {
+    margin: 30px auto !important;
+    text-align: left;
+  }
+}
+
+.modal-explorer .btn {
+  width: 100%;
+  white-space: normal;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 992px) {
+  .modal-explorer .btn {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+}
+
 .modal-redirect {
   position: fixed;
   top: 0;
@@ -1485,7 +1630,7 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
   background-color: rgba(255, 255, 255, 0.055);
   backdrop-filter: blur(6px);
   opacity: 0;
-  z-index: 10;
+  z-index: 12;
   pointer-events: none;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;

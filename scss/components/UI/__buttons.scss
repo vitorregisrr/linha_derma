@@ -26,11 +26,27 @@
     background-color: $color-primary;
     border: none;
     color: #fff;
-    @include transition();
 
     &:hover {
         background-color: darken($color-primary, 4);
         @include scale(1.03);
+    }
+
+    &--outline{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 10px;
+        font-weight: 800;
+        font-size: 14px;
+        background-color: transparent;
+        border: 1px solid $color-primary;
+        color: $color-primary !important;
+        
+        &:hover{
+            background-color: $color-primary;
+            color: #fff !important;
+        }
     }
 }
 
@@ -38,11 +54,24 @@
     background-color: $color-secondary;
     border: none;
     color: #fff;
-    @include transition();
 
     &:hover {
         background-color: darken($color-secondary, 4);
         @include scale(1.03);
+    }
+
+    &--outline{
+        padding: 12px 10px;
+        font-weight: 800;
+        font-size: 14px;
+        background-color: transparent;
+        border-color: 1px solid $color-secondary;
+        color: $color-secondary !important;
+        
+        &:hover{
+            background-color: $color-secondary;
+            color: #fff !important;
+        }
     }
 }
 

@@ -1,0 +1,109 @@
+.modal-explorer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F7F7;
+    opacity: 0;
+    z-index: 11;
+    pointer-events: none;
+    max-width: 100vw;
+    overflow-x: hidden;
+    @include transition();
+
+    &:after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 20px;
+        left: 0px;
+        background-image: url(../images/backgrounds/bullets-top-left.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 500px;
+
+        @media screen and (max-width: $bp-LG){
+            width: 220px;
+            height: 270px;
+            top: -0px;
+            left: -20px;
+        }
+    }
+    
+    &:before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 20px;
+        right: -90px;
+        background-image: url(../images/backgrounds/bullets-top-right.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 500px;
+
+        @media screen and (max-width: $bp-LG){
+            width: 220px;
+            height: 270px;
+            right: -155px;
+            top: 0px;
+        }
+    }
+
+    &.active{
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    &__content{
+        color: #A1A1A3;
+        
+        @media screen and (max-width: $bp-LG){
+            overflow-y: scroll;
+            text-align: center;
+            padding-bottom: 40px;
+        }
+    }
+    &__ico{
+        
+        @media screen and (max-width: $bp-LG){
+            margin-top: 60px;
+            margin-bottom: 30px;
+            width: 200px;
+        }
+    }
+
+    &__title{
+        font-weight: 800;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    hr{
+        border: 2px solid #54CBD9;
+        width: 80%;
+        margin-left: 0 !important;
+
+        @media screen and (max-width: $bp-LG){
+            margin: 30px auto !important;
+            text-align: left;
+        }
+    }
+
+    .btn{
+        width: 100%;
+        white-space: normal;
+        border-radius: 4px;
+
+        @media screen and (max-width: $bp-LG){
+            width: 80%;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+    }
+}

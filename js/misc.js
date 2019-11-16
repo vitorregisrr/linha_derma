@@ -56,7 +56,25 @@
     $('[data-toggle="redirect-modal"]').click( function(event){
         $('#redirect-modal').addClass('active');
         $('#redirect-modal').toggleClass('active');
-    })
+    });
+
+
+    // Internet Explorer warning scripts
+    function isIE() {
+        var ua = window.navigator.userAgent; //Check the userAgent property of the window.navigator object
+        var msie = ua.indexOf('MSIE '); // IE 10 or older
+        var trident = ua.indexOf('Trident/'); //IE 11
+    
+        return (msie > 0 || trident > 0);
+    }
+    if(isIE()){
+        $('#modal-explorer').addClass('active');
+     }
+    
+    $('[data-toggle="modal-explorer"]').click( function(event){
+        $('#modal-explorer').addClass('active');
+        $('#modal-explorer').toggleClass('active');
+    });
 
     window.dispatchEvent(new Event('resize'));
 
