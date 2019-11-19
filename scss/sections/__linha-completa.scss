@@ -160,7 +160,7 @@
             margin: 0 auto;
 
             @media screen and (max-width: $bp-MD) {
-                display: inline-block;
+                // display: inline-block;
             }
         }
 
@@ -195,17 +195,16 @@
             transform: translateX(-50%);
             top: 20px;
             display: block;
-            width: 68px !important;
-            height: 68px;
+            width: 80px !important;
+            height: 80px;
             @include transition();
 
             &.if-active {
                 opacity: 0;
 
                 @media screen and (max-width: $bp-MD) {
-                    top: 46px;
-                    width: 51px !important;
-                    height: 51px;
+                    width: 65px !important;
+                    height: 65px;
                 }
             }
         }
