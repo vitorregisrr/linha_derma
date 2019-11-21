@@ -66,16 +66,20 @@
             position: relative;
             width: 9px;
             height: 9px;
-            background-color: #A9A9AA;
+            background-color: #EBEBEB;
             margin: 0 7px;
             border-radius: 50%;
             cursor: pointer;
             @include transition();
 
+            @media screen and (max-width: $bp-LG){
+                background-color: #A9A9AA;
+            }
+
             &.active {
                 background-color: $color-primary;
-                width: 12px;
-                height: 12px;
+                width: 11px !important;
+                height: 11px !important;
             }
 
             &:after{
@@ -85,8 +89,8 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 opacity: 0;
-                width: 180%;
-                height: 180%;
+                width: 160%;
+                height: 160%;
                 border: 1px solid $color-primary;
                 border-radius: 50%;
                 @include transition();

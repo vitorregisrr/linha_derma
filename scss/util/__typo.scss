@@ -9,7 +9,9 @@
     letter-spacing: 1.5px;
 
     @media screen and (max-width: $bp-LG){
-        font-size: 27px;
+        font-size: 26px;
+        max-width: 85%;
+        margin: 0 auto;
         margin-bottom: 50px;
     }
 

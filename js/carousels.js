@@ -60,7 +60,7 @@
     linhaCompletaCarousel.on('changed.owl.carousel', setPrev);
 
     linhaCompletaCarousel.owlCarousel({
-        loop: false,
+        loop: true,
         margin: 20,
         center: true,
         nav: true,

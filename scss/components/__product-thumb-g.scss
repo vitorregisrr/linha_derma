@@ -98,6 +98,10 @@
         margin-bottom: 30px;
         max-width: 90%;
 
+        &.light{
+            color: #85D2DB;
+        }
+
         @media screen and (max-width: $bp-MD) {
             font-size: 18px;
             margin: 15px 0;
@@ -137,8 +141,8 @@
     }
 
     &-img {
-        margin-top: -90px;
-        height: 160px;
+        margin-top: -140px;
+        height: 210px;
         width: 160% !important;
         object-fit: contain;
         object-position: center center;
