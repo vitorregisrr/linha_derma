@@ -3327,7 +3327,7 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
   background-size: cover;
   background-color: white;
   padding: 120px 100px 40px 100px;
-  color: #A9A9AA;
+  color: #707070;
 }
 
 @media screen and (max-width: 1300px) {
@@ -4529,7 +4529,7 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
 
 .categoria-page__banner-caption-desc {
   font-size: 17px;
-  color: #A9A9AA;
+  color: #707070;
 }
 
 .categoria-page__banner-caption .categoria-page__banner-caption-divisor {
@@ -4703,7 +4703,7 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
   text-align: center;
   font-weight: 400;
   text-transform: uppercase;
-  color: #A9A9AA;
+  color: #a9a9a9;
   font-size: 44px;
   letter-spacing: 1.5px;
 }
@@ -4795,7 +4795,7 @@ button[data-toggle="collapse"][aria-expanded="true"]:after {
   font-size: 26px;
   letter-spacing: 1.5px;
   text-align: center;
-  color: #A9A9AA;
+  color: #707070;
   text-transform: uppercase;
   max-width: 900px;
   margin: 0 auto;
