@@ -49,6 +49,14 @@
     // Linha completa Carousel //
     const linhaCompletaCarousel = $(".linha-completa__carousel");
     
+    // Shuffle items
+    var parent = linhaCompletaCarousel;
+    var divs = parent.children();
+    while (divs.length) {
+        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+    }
+    // end
+
     const setPrev = function(){
         setTimeout( () => {
             $('.not-overlayed').removeClass('not-overlayed');
